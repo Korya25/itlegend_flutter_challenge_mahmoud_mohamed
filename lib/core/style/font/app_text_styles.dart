@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:itlegend_flutter_challenge/core/constants/app_constants.dart';
 import 'package:itlegend_flutter_challenge/core/style/font/font_weight_helper.dart';
 
 class AppTextStyles {
-  static const String _fontFamily = 'Tajawal';
+  static const String tajawalFont = AppConstants.tajawalFont;
 
   static TextStyle custom({
     double? size,
@@ -13,7 +14,7 @@ class AppTextStyles {
     TextDecoration? decoration,
   }) {
     return TextStyle(
-      fontFamily: _fontFamily,
+      fontFamily: tajawalFont,
       fontSize: size,
       fontWeight: weight ?? FontWeightHelper.regular,
       color: color,

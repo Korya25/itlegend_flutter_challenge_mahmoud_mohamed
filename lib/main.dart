@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itlegend_flutter_challenge/core/style/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(theme: AppTheme.lightTheme());
   }
 }
