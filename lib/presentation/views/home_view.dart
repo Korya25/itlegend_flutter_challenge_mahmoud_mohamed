@@ -17,14 +17,21 @@ class HomeView extends StatelessWidget {
             SliverToBoxAdapter(child: OfferCategoriesSection()),
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(top: 28),
+                padding: const EdgeInsets.only(top: 33),
                 child: PopularSubCategoriesSection(),
               ),
             ),
 
             SliverToBoxAdapter(
               child: Padding(
-                padding: const EdgeInsets.only(top: 18),
+                padding: const EdgeInsets.only(top: 33),
+                child: PromotionalBannerSection(),
+              ),
+            ),
+
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20),
                 child: PromotionalBannerSection(),
               ),
             ),
