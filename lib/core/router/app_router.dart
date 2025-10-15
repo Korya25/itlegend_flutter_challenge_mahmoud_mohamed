@@ -8,6 +8,12 @@ class AppRouter {
   static final GoRouter router = GoRouter(
     initialLocation: AppRoutes.home,
     routes: [
+      GoRoute(
+        path: AppRoutes.filtering,
+        name: AppRoutes.filtering,
+        builder: (context, state) =>
+            const Scaffold(body: Center(child: Text('filtering'))),
+      ),
       ShellRoute(
         builder: (context, state, child) => MainView(child: child),
         routes: [

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:itlegend_flutter_challenge/core/constants/app_constants.dart';
 import 'package:itlegend_flutter_challenge/core/style/font/font_weight_helper.dart';
+import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 
 class AppTextStyles {
   static const String _tajawalFont = AppConstants.tajawalFont;
@@ -45,4 +46,14 @@ class AppTextStyles {
 
   static TextStyle font12Medium({Color? color}) =>
       custom(size: 12, weight: FontWeightHelper.medium, color: color);
+  static TextStyle font16GreyBold({Color? color}) => custom(
+    size: 16,
+    color: AppColors.textAndIconGrey,
+    weight: FontWeightHelper.bold,
+  );
+  static TextStyle font16PrimaryMeduim({Color? color}) => custom(
+    size: 16,
+    color: AppColors.textAndIconPrimary,
+    weight: FontWeightHelper.medium,
+  );
 }
