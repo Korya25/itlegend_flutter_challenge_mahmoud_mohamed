@@ -34,7 +34,7 @@ class PromoBannerCard extends StatelessWidget {
               Text(banner.title, style: AppTextStyles.font12RegularGreen()),
             ],
           ),
-          Text(banner.subtitle, style: AppTextStyles.font10RegularPrimariy()),
+          Text(banner.subtitle, style: AppTextStyles.font10RegularPrimary()),
         ],
       ),
     );

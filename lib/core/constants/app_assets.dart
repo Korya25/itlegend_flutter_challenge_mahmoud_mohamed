@@ -12,4 +12,10 @@ class AppAssets {
   static const String datasetActive = 'assets/svgs/dataset_enable.svg';
   static const String datasetInactive = 'assets/svgs/dataset_disable.svg';
   static const String trueIcon = 'assets/svgs/true.svg';
+  static const String cart = 'assets/svgs/add_shopping_cart.svg';
+  static const String company = 'assets/svgs/Company Badge.svg';
+  static const String favorite = 'assets/svgs/favorite.svg';
+  static const String fire = 'assets/svgs/local_fire_department.svg';
+  static const String percentage = 'assets/svgs/Percentage.svg';
+  static const String talaetMostafaPng = 'assets/images/talet_mostafa.png';
 }

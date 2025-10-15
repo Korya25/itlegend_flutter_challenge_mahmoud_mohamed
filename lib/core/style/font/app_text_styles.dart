@@ -66,9 +66,14 @@ class AppTextStyles {
     color: Color(0xff3A813F),
     weight: FontWeightHelper.regular,
   );
-  static TextStyle font10RegularPrimariy() => custom(
+  static TextStyle font10RegularPrimary() => custom(
     size: 10,
     color: AppColors.textAndIconPrimary,
     weight: FontWeightHelper.regular,
+  );
+  static TextStyle font14MeduimPrimary() => custom(
+    size: 14,
+    color: AppColors.textAndIconPrimary,
+    weight: FontWeightHelper.medium,
   );
 }

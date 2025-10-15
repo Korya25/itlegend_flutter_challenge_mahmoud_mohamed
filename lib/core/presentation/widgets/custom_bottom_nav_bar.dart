@@ -15,30 +15,26 @@ class CustomBottomNavBar extends StatelessWidget {
     final navItems = BottomNavList.items;
     return Container(
       color: AppColors.backPrimary,
-      child: SafeArea(
-        top: false,
-        bottom: false,
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-          decoration: BoxDecoration(
-            color: AppColors.backPrimary,
-            border: Border(
-              top: BorderSide(color: Colors.black.withOpacity(0.1), width: 1),
-            ),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        decoration: BoxDecoration(
+          color: AppColors.backPrimary,
+          border: Border(
+            top: BorderSide(color: Colors.black.withOpacity(0.1), width: 1),
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: navItems.map((item) {
-              final isSelected = currentPath.startsWith(item.route);
-              final isMiddle = navItems.indexOf(item) == navItems.length ~/ 2;
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: navItems.map((item) {
+            final isSelected = currentPath.startsWith(item.route);
+            final isMiddle = navItems.indexOf(item) == navItems.length ~/ 2;
 
-              return BottomNavItem(
-                item: item,
-                isSelected: isSelected,
-                isMiddle: isMiddle,
-              );
-            }).toList(),
-          ),
+            return BottomNavItem(
+              item: item,
+              isSelected: isSelected,
+              isMiddle: isMiddle,
+            );
+          }).toList(),
         ),
       ),
     );
