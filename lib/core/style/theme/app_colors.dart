@@ -4,10 +4,11 @@ class AppColors {
   //  COLORS
   static const Color backPrimary = Color(0xFFffffff);
 
-  static const Color primary = Color(0xFF0062e2);
+  static const Color primary = Color(0xFF0062E2);
 
   // Text And Icon colors
-  static const Color textAndIconPrimary = Color(0xFF090f1f);
+  static const Color textAndIconPrimary = Color(0xFF090F1F);
+  static const Color textAndIconGrey = Color(0xff84878f);
 
   // ========== Shimmer Colors ==========
   static const Color shimmerBase = Color(
