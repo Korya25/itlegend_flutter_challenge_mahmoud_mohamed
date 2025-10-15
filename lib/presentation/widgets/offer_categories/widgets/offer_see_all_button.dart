@@ -4,8 +4,8 @@ import 'package:itlegend_flutter_challenge/core/router/app_routes.dart';
 import 'package:itlegend_flutter_challenge/core/style/font/app_text_styles.dart';
 import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 
-class SeeAllButton extends StatelessWidget {
-  const SeeAllButton({super.key});
+class OfferSeeAllButton extends StatelessWidget {
+  const OfferSeeAllButton({super.key});
 
   @override
   Widget build(BuildContext context) {
