@@ -46,6 +46,11 @@ class AppTextStyles {
 
   static TextStyle font12Medium({Color? color}) =>
       custom(size: 12, weight: FontWeightHelper.medium, color: color);
+  static TextStyle font12RegularPrimary() => custom(
+    size: 12,
+    weight: FontWeightHelper.regular,
+    color: AppColors.textAndIconPrimary,
+  );
   static TextStyle font16GreyBold({Color? color}) => custom(
     size: 16,
     color: AppColors.textAndIconGrey,

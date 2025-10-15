@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 import 'package:itlegend_flutter_challenge/presentation/widgets/offer_categories/offer_categories_section.dart';
+import 'package:itlegend_flutter_challenge/presentation/widgets/popular_sub_categories/popular_sub_categories_section.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -12,9 +13,12 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
         child: CustomScrollView(
           slivers: [
+            SliverToBoxAdapter(child: OfferCategoriesSection()),
             SliverToBoxAdapter(
-              child: OfferCategoriesSection(),
-              //
+              child: Padding(
+                padding: const EdgeInsets.only(top: 28),
+                child: PopularSubCategoriesSection(),
+              ),
             ),
           ],
         ),
