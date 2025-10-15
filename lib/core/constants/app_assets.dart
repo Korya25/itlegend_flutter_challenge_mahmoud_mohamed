@@ -11,4 +11,5 @@ class AppAssets {
   static const String chatInactive = 'assets/svgs/chat_disable.svg';
   static const String datasetActive = 'assets/svgs/dataset_enable.svg';
   static const String datasetInactive = 'assets/svgs/dataset_disable.svg';
+  static const String trueIcon = 'assets/svgs/true.svg';
 }

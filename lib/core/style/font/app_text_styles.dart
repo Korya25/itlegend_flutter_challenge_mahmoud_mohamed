@@ -51,14 +51,24 @@ class AppTextStyles {
     weight: FontWeightHelper.regular,
     color: AppColors.textAndIconPrimary,
   );
-  static TextStyle font16GreyBold({Color? color}) => custom(
+  static TextStyle font16GreyBold() => custom(
     size: 16,
     color: AppColors.textAndIconGrey,
     weight: FontWeightHelper.bold,
   );
-  static TextStyle font16PrimaryMeduim({Color? color}) => custom(
+  static TextStyle font16PrimaryMeduim() => custom(
     size: 16,
     color: AppColors.textAndIconPrimary,
     weight: FontWeightHelper.medium,
+  );
+  static TextStyle font12RegularGreen() => custom(
+    size: 12,
+    color: Color(0xff3A813F),
+    weight: FontWeightHelper.regular,
+  );
+  static TextStyle font10RegularPrimariy() => custom(
+    size: 10,
+    color: AppColors.textAndIconPrimary,
+    weight: FontWeightHelper.regular,
   );
 }
