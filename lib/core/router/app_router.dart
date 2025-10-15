@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:itlegend_flutter_challenge/core/router/app_routes.dart';
 import 'package:itlegend_flutter_challenge/core/presentation/views/main_view.dart';
+import 'package:itlegend_flutter_challenge/presentation/views/home_view.dart';
 
 class AppRouter {
   static final GoRouter router = GoRouter(
@@ -13,8 +14,7 @@ class AppRouter {
           GoRoute(
             path: AppRoutes.home,
             name: AppRoutes.home,
-            builder: (context, state) =>
-                const Scaffold(body: Center(child: Text('Home'))),
+            builder: (context, state) => const HomeView(),
           ),
           GoRoute(
             path: AppRoutes.profile,

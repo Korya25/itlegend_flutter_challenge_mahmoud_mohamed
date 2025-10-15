@@ -15,7 +15,7 @@ class MainView extends StatelessWidget {
           children: [
             Expanded(child: child),
             Padding(
-              padding: const EdgeInsets.only(bottom: 2),
+              padding: const EdgeInsets.only(bottom: 8, left: 8, right: 8),
               child: const CustomBottomNavBar(),
             ),
           ],
