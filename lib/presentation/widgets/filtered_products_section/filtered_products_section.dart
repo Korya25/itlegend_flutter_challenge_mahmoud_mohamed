@@ -14,7 +14,7 @@ class FilteredProductsSection extends StatelessWidget {
       sliver: SliverGrid(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          mainAxisExtent: 370,
+          mainAxisExtent: 385,
           crossAxisSpacing: 8,
           mainAxisSpacing: 16,
         ),

@@ -1,5 +1,3 @@
-import 'package:intl/intl.dart';
-
 extension StringLimitExtension on String {
   String limit(int maxChars) {
     if (length <= maxChars) return this;
@@ -18,7 +16,7 @@ extension PriceFormatter on num {
       result = numStr[i] + result;
       count++;
       if (count % 3 == 0 && i > 0) {
-        result = ',' + result;
+        result = ',$result';
       }
     }
     return result;
