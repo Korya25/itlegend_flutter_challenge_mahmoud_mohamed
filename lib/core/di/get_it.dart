@@ -1,10 +1,10 @@
 import 'package:get_it/get_it.dart';
-import 'package:itlegend_flutter_challenge/data/datasources/database_helper.dart';
-import 'package:itlegend_flutter_challenge/data/repo/categories_repository.dart';
-import 'package:itlegend_flutter_challenge/data/repo/products_repository.dart';
-import 'package:itlegend_flutter_challenge/data/repo/promo_banners_repository.dart';
-import 'package:itlegend_flutter_challenge/data/repo/sub_categories_repository.dart';
-import 'package:itlegend_flutter_challenge/presentation/controller/home_cubit.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/datasources/database_helper.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/categories_repository.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/products_repository.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/promo_banners_repository.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/sub_categories_repository.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/presentation/controller/home_cubit.dart';
 
 final sl = GetIt.instance;
 
