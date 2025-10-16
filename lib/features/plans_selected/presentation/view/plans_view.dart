@@ -15,7 +15,6 @@ class PlansView extends StatelessWidget {
               // Plans Header
               SizedBox(height: 30),
               PlansViewHeader(),
-
               //
             ],
           ),

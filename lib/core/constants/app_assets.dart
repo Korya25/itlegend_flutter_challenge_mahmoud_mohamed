@@ -19,4 +19,13 @@ class AppAssets {
   static const String percentage = 'assets/svgs/Percentage.svg';
   static const String talaetMostafaPng = 'assets/images/talet_mostafa.png';
   static const String arrow = 'assets/svgs/chevron_right.svg';
+  static const String watch = 'assets/svgs/acute.svg';
+  static const String arrowBack = 'assets/svgs/arrow_back.svg';
+  static const String checbkoxDisable = 'assets/svgs/Checbkox (1).svg';
+  static const String checbkoxActive = 'assets/svgs/Checbkox.svg';
+  static const String globel = 'assets/svgs/globe.svg';
+  static const String pin = 'assets/svgs/keep.svg';
+  static const String rocket = 'assets/svgs/rocket.svg';
+  static const String workspacePremium = 'assets/svgs/workspace_premium.svg';
+  static const String planOfferBadge = 'assets/svgs/Plan Offer Badge.svg';
 }
