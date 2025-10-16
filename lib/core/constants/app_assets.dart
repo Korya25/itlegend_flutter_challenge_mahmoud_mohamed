@@ -18,4 +18,5 @@ class AppAssets {
   static const String fire = 'assets/svgs/local_fire_department.svg';
   static const String percentage = 'assets/svgs/Percentage.svg';
   static const String talaetMostafaPng = 'assets/images/talet_mostafa.png';
+  static const String arrow = 'assets/svgs/chevron_right.svg';
 }
