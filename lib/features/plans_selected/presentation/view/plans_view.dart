@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:itlegend_flutter_challenge/features/plans_selected/data/data/database/plans_database_helper.dart';
-import 'package:itlegend_flutter_challenge/features/plans_selected/data/data/repo/plans_repository.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_cubit.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_state.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/contact_with_support.dart';
@@ -11,19 +9,6 @@ import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/
 
 class PlansView extends StatelessWidget {
   const PlansView({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) =>
-          PlansCubit(PlansRepositoryImpl(PlansDatabaseHelper()))..getPlans(),
-      child: const _PlansViewContent(),
-    );
-  }
-}
-
-class _PlansViewContent extends StatelessWidget {
-  const _PlansViewContent();
 
   @override
   Widget build(BuildContext context) {

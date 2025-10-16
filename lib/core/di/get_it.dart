@@ -5,6 +5,9 @@ import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/product
 import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/promo_banners_repository.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/data/repo/sub_categories_repository.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/presentation/controller/home_cubit.dart';
+import 'package:itlegend_flutter_challenge/features/plans_selected/data/data/database/plans_database_helper.dart';
+import 'package:itlegend_flutter_challenge/features/plans_selected/data/data/repo/plans_repository.dart';
+import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_cubit.dart';
 
 final sl = GetIt.instance;
 
@@ -32,4 +35,12 @@ Future<void> initGetIt() async {
       sl<SubCategoriesRepository>(),
     ),
   );
+
+  sl.registerLazySingleton<PlansDatabaseHelper>(() => PlansDatabaseHelper());
+
+  sl.registerLazySingleton<PlansRepository>(
+    () => PlansRepositoryImpl(sl<PlansDatabaseHelper>()),
+  );
+
+  sl.registerFactory<PlansCubit>(() => PlansCubit(sl<PlansRepository>()));
 }
