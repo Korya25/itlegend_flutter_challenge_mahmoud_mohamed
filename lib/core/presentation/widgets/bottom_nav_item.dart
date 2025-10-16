@@ -31,7 +31,7 @@ class BottomNavItem extends StatelessWidget {
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
-      onTap: () => context.goNamed(item.route),
+      onTap: () => context.pushNamed(item.route),
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 4),
         decoration: BoxDecoration(

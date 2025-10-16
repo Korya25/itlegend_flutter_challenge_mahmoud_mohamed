@@ -9,6 +9,8 @@ class AppColors {
   // Text And Icon colors
   static const Color textAndIconPrimary = Color(0xFF090F1F);
   static const Color textAndIconGrey = Color(0xff84878f);
+  static const Color textAndIconOrange = Color(0xFFF95B1C);
+  static const Color offerCategoriesCard = Color(0x0CF95B1C);
 
   // ========== Shimmer Colors ==========
   static const Color shimmerBase = Color(
