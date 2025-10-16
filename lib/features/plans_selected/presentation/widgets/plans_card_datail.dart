@@ -19,7 +19,7 @@ class PlansCardDateail extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         if (viewsCount != null) NumberOfViewsContainer(viewsCount: viewsCount!),
-        if (viewsCount == null) SizedBox(width: 0, height: 42),
+        if (viewsCount == null) SizedBox(width: 0, height: 0),
 
         Column(
           spacing: 8,

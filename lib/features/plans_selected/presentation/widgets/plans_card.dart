@@ -38,9 +38,12 @@ class PlansCard extends StatelessWidget {
         // Banner
         if (plan.badgeText != null)
           Positioned(
-            top: -22,
             right: 0,
-            child: PlanOfferBadge(badgeText: plan.badgeText!),
+            top: -20,
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: PlanOfferBadge(badgeText: plan.badgeText!),
+            ),
           ),
       ],
     );

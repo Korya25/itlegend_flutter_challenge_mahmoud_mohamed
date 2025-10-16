@@ -27,5 +27,7 @@ class AppAssets {
   static const String pin = 'assets/svgs/keep.svg';
   static const String rocket = 'assets/svgs/rocket.svg';
   static const String workspacePremium = 'assets/svgs/workspace_premium.svg';
-  static const String planOfferBadge = 'assets/svgs/Plan Offer Badge.svg';
+  static const String planOfferBadgelarge = 'assets/svgs/Plan Offer Badge.svg';
+  static const String planOfferBadgesmall =
+      'assets/svgs/Plan Offer Badge (1).svg';
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/data/models/plan_model.dart';
+import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/contact_with_support.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/plans_card.dart';
+import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/plans_next_button.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/plans_view_header.dart';
 
 class PlansView extends StatelessWidget {
@@ -11,6 +13,7 @@ class PlansView extends StatelessWidget {
     final List<PlanModel> plans = PlanModel.samplePlans;
 
     return Scaffold(
+      bottomNavigationBar: PlansNextButton(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
         child: CustomScrollView(
@@ -21,7 +24,7 @@ class PlansView extends StatelessWidget {
                 children: [
                   SizedBox(height: 30),
                   PlansViewHeader(),
-                  SizedBox(height: 30),
+                  SizedBox(height: 20),
                 ],
               ),
             ),
@@ -31,10 +34,17 @@ class PlansView extends StatelessWidget {
               itemBuilder: (context, index) {
                 final plan = plans[index];
                 return Padding(
-                  padding: const EdgeInsets.only(bottom: 30),
+                  padding: const EdgeInsets.only(bottom: 24),
                   child: PlansCard(plan: plan),
                 );
               },
+            ),
+
+            SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsetsGeometry.only(top: 10, bottom: 20),
+                child: ContactWithSupport(),
+              ),
             ),
           ],
         ),
