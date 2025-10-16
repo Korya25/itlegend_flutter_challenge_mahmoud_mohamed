@@ -24,7 +24,11 @@ class PlansViewHeader extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () => context.pop(),
-              child: SvgPicture.asset(AppAssets.arrow, width: 24, height: 24),
+              child: SvgPicture.asset(
+                AppAssets.arrowRight,
+                width: 24,
+                height: 24,
+              ),
             ),
           ],
         ),

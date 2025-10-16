@@ -97,4 +97,12 @@ class AppTextStyles {
     color: AppColors.textAndIconGreen,
     weight: FontWeightHelper.bold,
   );
+  static TextStyle font14BoldBlue() =>
+      custom(size: 14, color: AppColors.primary, weight: FontWeightHelper.bold);
+
+  static TextStyle font12RegularGrey() => custom(
+    size: 12,
+    color: AppColors.textAndIconGrey,
+    weight: FontWeightHelper.regular,
+  );
 }

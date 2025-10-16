@@ -18,7 +18,8 @@ class AppAssets {
   static const String fire = 'assets/svgs/local_fire_department.svg';
   static const String percentage = 'assets/svgs/Percentage.svg';
   static const String talaetMostafaPng = 'assets/images/talet_mostafa.png';
-  static const String arrow = 'assets/svgs/chevron_right.svg';
+  static const String arrowRight = 'assets/svgs/chevron_right.svg';
+  static const String arrowLeft = 'assets/svgs/chevron_backward.svg';
   static const String watch = 'assets/svgs/acute.svg';
   static const String arrowBack = 'assets/svgs/arrow_back.svg';
   static const String checbkoxDisable = 'assets/svgs/Checbkox (1).svg';
@@ -28,6 +29,9 @@ class AppAssets {
   static const String navBarLine = 'assets/svgs/nav_bar_line.svg';
   static const String closeSmall = 'assets/svgs/close_small.svg';
   static const String rocket = 'assets/svgs/rocket.svg';
+  static const String location = 'assets/svgs/location_on.svg';
+  static const String materialSymbols =
+      'assets/svgs/material-symbols_real-estate-agent-rounded.svg';
   static const String workspacePremium = 'assets/svgs/workspace_premium.svg';
   static const String planOfferBadgelarge = 'assets/svgs/Plan Offer Badge.svg';
   static const String planOfferBadgesmall =
