@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
-import 'package:itlegend_flutter_challenge/core/router/app_routes.dart';
 import 'package:itlegend_flutter_challenge/core/presentation/views/main_view.dart';
+import 'package:itlegend_flutter_challenge/core/router/app_routes.dart';
+import 'package:itlegend_flutter_challenge/presentation/controller/home_cubit.dart';
 import 'package:itlegend_flutter_challenge/presentation/views/home_view.dart';
 
 class AppRouter {
@@ -20,7 +23,12 @@ class AppRouter {
           GoRoute(
             path: AppRoutes.home,
             name: AppRoutes.home,
-            builder: (context, state) => const HomeView(),
+            builder: (context, state) {
+              return BlocProvider<HomeCubit>(
+                create: (_) => GetIt.instance<HomeCubit>()..loadData(),
+                child: const HomeView(),
+              );
+            },
           ),
           GoRoute(
             path: AppRoutes.profile,

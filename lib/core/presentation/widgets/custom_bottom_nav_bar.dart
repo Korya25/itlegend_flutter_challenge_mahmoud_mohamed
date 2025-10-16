@@ -20,7 +20,7 @@ class CustomBottomNavBar extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.backPrimary,
           border: Border(
-            top: BorderSide(color: Colors.black.withOpacity(0.1), width: 1),
+            top: BorderSide(color: Colors.black.withOpacity(0.1), width: 1.5),
           ),
         ),
         child: Row(

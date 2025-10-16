@@ -1,13 +1,23 @@
-import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:itlegend_flutter_challenge/core/di/get_it.dart';
 import 'package:itlegend_flutter_challenge/core/router/app_router.dart';
 import 'package:itlegend_flutter_challenge/core/style/theme/app_theme.dart';
+import 'package:itlegend_flutter_challenge/data/datasources/database_helper.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await initGetIt();
+  await DatabaseHelper().database;
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+    ),
+  );
   runApp(
-    DevicePreview(enabled: !kReleaseMode, builder: (context) => MyApp()),
-    // const MyApp()
+    // DevicePreview(enabled: !kReleaseMode, builder: (context) => MyApp()),
+    const MyApp(),
   );
 }
 

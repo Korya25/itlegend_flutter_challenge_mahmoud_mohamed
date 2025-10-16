@@ -31,7 +31,6 @@ class ProductMockData {
       name: 'جاكيت من الصوف مناسب',
       imageUrl: 'assets/images/shirt.png',
       originalPrice: 60000000,
-
       discountedPrice: 32000000,
       sold: 3.3,
     ),
@@ -51,7 +50,6 @@ class ProductMockData {
       discountedPrice: 32000000,
       sold: 3.3,
     ),
-
     ProductModel(
       id: '5',
       name: 'جاكيت من الصوف مناسب',
