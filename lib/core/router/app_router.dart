@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:itlegend_flutter_challenge/core/di/get_it.dart';
 import 'package:itlegend_flutter_challenge/core/presentation/views/main_view.dart';
 import 'package:itlegend_flutter_challenge/core/router/app_routes.dart';
+import 'package:itlegend_flutter_challenge/features/Filtering/presentation/views/filtering_view.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/presentation/controller/home_cubit.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/presentation/views/home_view.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_cubit.dart';
@@ -17,8 +18,7 @@ class AppRouter {
       GoRoute(
         path: AppRoutes.filtering,
         name: AppRoutes.filtering,
-        builder: (context, state) =>
-            const Scaffold(body: Center(child: Text('filtering'))),
+        builder: (context, state) => FilteringView(),
       ),
       GoRoute(
         path: AppRoutes.profile,

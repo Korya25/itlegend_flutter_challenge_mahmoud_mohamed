@@ -25,6 +25,8 @@ class AppAssets {
   static const String checbkoxActive = 'assets/svgs/Checbkox.svg';
   static const String globel = 'assets/svgs/globe.svg';
   static const String pin = 'assets/svgs/keep.svg';
+  static const String navBarLine = 'assets/svgs/nav_bar_line.svg';
+  static const String closeSmall = 'assets/svgs/close_small.svg';
   static const String rocket = 'assets/svgs/rocket.svg';
   static const String workspacePremium = 'assets/svgs/workspace_premium.svg';
   static const String planOfferBadgelarge = 'assets/svgs/Plan Offer Badge.svg';
