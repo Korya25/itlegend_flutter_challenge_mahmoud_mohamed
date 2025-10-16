@@ -63,7 +63,7 @@ class AppTextStyles {
   );
   static TextStyle font12RegularGreen() => custom(
     size: 12,
-    color: Color(0xff3A813F),
+    color: AppColors.textAndIconGreen,
     weight: FontWeightHelper.regular,
   );
   static TextStyle font10RegularPrimary() => custom(
@@ -90,6 +90,11 @@ class AppTextStyles {
   static TextStyle font16Bold() => custom(
     size: 16,
     color: AppColors.textAndIconPrimary,
+    weight: FontWeightHelper.bold,
+  );
+  static TextStyle font14BoldGreen() => custom(
+    size: 14,
+    color: AppColors.textAndIconGreen,
     weight: FontWeightHelper.bold,
   );
 }
