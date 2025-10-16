@@ -87,4 +87,9 @@ class AppTextStyles {
     color: AppColors.textAndIconPrimary,
     weight: FontWeightHelper.regular,
   );
+  static TextStyle font16Bold() => custom(
+    size: 16,
+    color: AppColors.textAndIconPrimary,
+    weight: FontWeightHelper.bold,
+  );
 }
