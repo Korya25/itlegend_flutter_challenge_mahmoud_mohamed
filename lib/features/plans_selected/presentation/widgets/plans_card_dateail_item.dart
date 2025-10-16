@@ -15,19 +15,24 @@ class PlansCardDateailItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.end,
           spacing: 2,
           children: [
-            Text(title, style: AppTextStyles.font14MeduimPrimary()),
+            Text(
+              title,
+              style: AppTextStyles.font14MeduimPrimary(),
+              textAlign: TextAlign.right,
+            ),
             if (subTitle != null)
               Text(
                 '( $subTitle )',
                 style: AppTextStyles.font14MeduimPrimary().copyWith(
                   color: Color(0xffFF4144),
                 ),
-                maxLines: 1,
+                textAlign: TextAlign.right,
               ),
           ],
         ),

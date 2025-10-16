@@ -2,11 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
+import 'package:itlegend_flutter_challenge/features/plans_selected/data/models/plan_model.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/plans_card_body.dart';
 import 'plan_offer_badge.dart';
 
 class PlansCard extends StatelessWidget {
-  const PlansCard({super.key});
+  const PlansCard({super.key, required this.plan});
+  final PlanModel plan;
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +33,15 @@ class PlansCard extends StatelessWidget {
               ),
             ],
           ),
-          child: PlansCardBody(),
+          child: PlansCardBody(plan: plan),
         ),
         // Banner
-        const Positioned(top: -25, right: 0, child: PlanOfferBadge()),
+        if (plan.badgeText != null)
+          Positioned(
+            top: -22,
+            right: 0,
+            child: PlanOfferBadge(badgeText: plan.badgeText!),
+          ),
       ],
     );
   }

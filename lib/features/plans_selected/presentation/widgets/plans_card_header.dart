@@ -5,8 +5,9 @@ import 'package:itlegend_flutter_challenge/core/utils/context_exstions.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/plans_card_title_check_box.dart';
 
 class PlansCardHeader extends StatelessWidget {
-  const PlansCardHeader({super.key});
-
+  const PlansCardHeader({super.key, required this.price, required this.name});
+  final num price;
+  final String name;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -57,7 +58,7 @@ class PlansCardHeader extends StatelessWidget {
                 ),
               ),
               child: Text(
-                3000.formattedPrice,
+                price.formattedPrice,
                 style: AppTextStyles.font16Bold().copyWith(
                   color: AppColors.textAndIconOrange,
                   height: 1.0,
@@ -66,7 +67,7 @@ class PlansCardHeader extends StatelessWidget {
             ),
           ],
         ),
-        PlansCardTitleCheckBox(),
+        PlansCardTitleCheckBox(name: name),
       ],
     );
   }

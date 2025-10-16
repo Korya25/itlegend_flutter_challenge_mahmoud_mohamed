@@ -5,8 +5,8 @@ import 'package:itlegend_flutter_challenge/core/style/font/app_text_styles.dart'
 import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 
 class PlansCardTitleCheckBox extends StatefulWidget {
-  const PlansCardTitleCheckBox({super.key});
-
+  const PlansCardTitleCheckBox({super.key, required this.name});
+  final String name;
   @override
   State<PlansCardTitleCheckBox> createState() => _PlansCardTitleCheckBoxState();
 }
@@ -22,7 +22,7 @@ class _PlansCardTitleCheckBoxState extends State<PlansCardTitleCheckBox> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'أساسية',
+          widget.name,
           style: AppTextStyles.font16Bold().copyWith(
             color: isSelected
                 ? AppColors.primary

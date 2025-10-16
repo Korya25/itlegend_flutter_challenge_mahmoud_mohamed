@@ -3,7 +3,8 @@ import 'package:itlegend_flutter_challenge/core/style/font/app_text_styles.dart'
 import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 
 class NumberOfViewsContainer extends StatelessWidget {
-  const NumberOfViewsContainer({super.key});
+  const NumberOfViewsContainer({super.key, required this.viewsCount});
+  final int viewsCount;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,10 @@ class NumberOfViewsContainer extends StatelessWidget {
           ),
 
           child: Center(
-            child: Text('24', style: AppTextStyles.font14BoldGreen()),
+            child: Text(
+              viewsCount.toString(),
+              style: AppTextStyles.font14BoldGreen(),
+            ),
           ),
         ),
         SizedBox(
