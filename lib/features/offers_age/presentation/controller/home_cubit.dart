@@ -16,10 +16,10 @@ class HomeCubit extends Cubit<HomeState> {
     this._productsRepo,
     this._promoBannersRepo,
     this._subCategoriesRepo,
-  ) : super(HomeInitial());
+  ) : super(const HomeInitial());
 
   Future<void> loadData() async {
-    emit(HomeLoading());
+    emit(const HomeLoading());
     try {
       final categories = await _categoriesRepo.getAllCategories();
       final products = await _productsRepo.getAllProducts();

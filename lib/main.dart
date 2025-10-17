@@ -3,12 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:itlegend_flutter_challenge/core/di/get_it.dart';
 import 'package:itlegend_flutter_challenge/core/router/app_router.dart';
 import 'package:itlegend_flutter_challenge/core/style/theme/app_theme.dart';
-import 'package:itlegend_flutter_challenge/features/offers_age/data/datasources/database_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initGetIt();
-  await DatabaseHelper().database;
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,

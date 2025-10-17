@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:itlegend_flutter_challenge/core/style/font/app_text_styles.dart';
-import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 import 'package:itlegend_flutter_challenge/features/Filtering/presentation/widgets/x_icon_painter.dart';
 
 class FilteringHeader extends StatelessWidget {

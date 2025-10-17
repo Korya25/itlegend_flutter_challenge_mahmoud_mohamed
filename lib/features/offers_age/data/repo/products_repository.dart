@@ -1,11 +1,16 @@
-import 'package:itlegend_flutter_challenge/features/offers_age/data/datasources/database_helper.dart';
+import 'package:itlegend_flutter_challenge/core/database/database_helper.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/data/models/product_model.dart';
 
-class ProductsRepository {
+abstract class ProductsRepository {
+  Future<List<ProductModel>> getAllProducts();
+}
+
+class ProductsRepositoryImpl implements ProductsRepository {
   final DatabaseHelper _dbHelper;
 
-  ProductsRepository(this._dbHelper);
+  ProductsRepositoryImpl(this._dbHelper);
 
+  @override
   Future<List<ProductModel>> getAllProducts() async {
     return await _dbHelper.getAllProducts();
   }

@@ -1,4 +1,4 @@
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/data/data/repo/plans_repository.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_state.dart';
 
