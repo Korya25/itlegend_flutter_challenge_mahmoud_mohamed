@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class FiltringSectionsDivider extends StatelessWidget {
-  const FiltringSectionsDivider({super.key});
+class FilteringSectionsDivider extends StatelessWidget {
+  const FilteringSectionsDivider({super.key});
 
   @override
   Widget build(BuildContext context) {

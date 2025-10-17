@@ -22,7 +22,7 @@ class FilterChipItem extends StatelessWidget {
       onTap: onTap,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 200),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         decoration: ShapeDecoration(
           color: isSelected
               ? AppColors.continerPrimary.withOpacity(0.05)

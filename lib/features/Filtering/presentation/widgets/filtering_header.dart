@@ -17,7 +17,7 @@ class FilteringHeader extends StatelessWidget {
         Text(
           'رجوع للأفتراضى',
           textAlign: TextAlign.center,
-          style: AppTextStyles.font16Bold().copyWith(color: AppColors.primary),
+          style: AppTextStyles.font16Bold().copyWith(color: Color(0xff0079FE)),
         ),
         Row(
           spacing: 12,
