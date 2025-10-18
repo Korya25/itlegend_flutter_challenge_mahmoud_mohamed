@@ -7,20 +7,19 @@ abstract class CategoriesRepository {
 }
 
 class CategoriesRepositoryImpl implements CategoriesRepository {
-  late final OffersDao _offersDao;
+  OffersDao? _offersDao;
 
-  CategoriesRepositoryImpl() {
-    _initDao();
-  }
-
-  Future<void> _initDao() async {
-    final db = await DatabaseHelper().database;
-    _offersDao = OffersDao(db);
+  Future<OffersDao> get _dao async {
+    if (_offersDao == null) {
+      final db = await DatabaseHelper().database;
+      _offersDao = OffersDao(db);
+    }
+    return _offersDao!;
   }
 
   @override
   Future<List<OfferCategoryModel>> getAllCategories() async {
-    await _initDao(); // Ensure initialized
-    return await _offersDao.getAllCategories();
+    final dao = await _dao;
+    return dao.getAllCategories();
   }
 }

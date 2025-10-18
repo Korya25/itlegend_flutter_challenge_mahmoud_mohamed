@@ -11,7 +11,6 @@ import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/
 final sl = GetIt.instance;
 
 Future<void> initGetIt() async {
-  await DatabaseHelper().database;
   sl.registerLazySingleton<DatabaseHelper>(() => DatabaseHelper());
 
   // Offers

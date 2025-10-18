@@ -7,20 +7,19 @@ abstract class PlansRepository {
 }
 
 class PlansRepositoryImpl implements PlansRepository {
-  late final PlansDao _plansDao;
+  PlansDao? _plansDao;
 
-  PlansRepositoryImpl() {
-    _initDao();
-  }
-
-  Future<void> _initDao() async {
-    final db = await DatabaseHelper().database;
-    _plansDao = PlansDao(db);
+  Future<PlansDao> get _dao async {
+    if (_plansDao == null) {
+      final db = await DatabaseHelper().database;
+      _plansDao = PlansDao(db);
+    }
+    return _plansDao!;
   }
 
   @override
   Future<List<PlanModel>> getAllPlans() async {
-    await _initDao();
-    return await _plansDao.getAllPlans();
+    final dao = await _dao;
+    return dao.getAllPlans();
   }
 }

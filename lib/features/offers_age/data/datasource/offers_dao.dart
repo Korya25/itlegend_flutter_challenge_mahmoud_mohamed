@@ -9,9 +9,7 @@ import 'package:itlegend_flutter_challenge/features/offers_age/data/models/sub_c
 
 class OffersDao {
   final Database _db;
-
   OffersDao(this._db);
-
   Future<List<OfferCategoryModel>> getAllCategories() async {
     try {
       final maps = await _db.query(DatabaseConstants.categoriesTable);

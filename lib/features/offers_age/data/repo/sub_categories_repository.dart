@@ -7,20 +7,18 @@ abstract class SubCategoriesRepository {
 }
 
 class SubCategoriesRepositoryImpl implements SubCategoriesRepository {
-  late final OffersDao _offersDao;
+  OffersDao? _offersDao;
 
-  SubCategoriesRepositoryImpl() {
-    _initDao();
-  }
+  SubCategoriesRepositoryImpl();
 
-  Future<void> _initDao() async {
-    final db = await DatabaseHelper().database;
-    _offersDao = OffersDao(db);
+  Future<OffersDao> _getDao() async {
+    _offersDao ??= OffersDao(await DatabaseHelper().database);
+    return _offersDao!;
   }
 
   @override
   Future<List<SubCategoryModel>> getAllSubCategories() async {
-    await _initDao();
-    return await _offersDao.getAllSubCategories();
+    final dao = await _getDao();
+    return await dao.getAllSubCategories();
   }
 }

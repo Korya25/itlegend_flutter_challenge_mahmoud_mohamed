@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:itlegend_flutter_challenge/core/presentation/widgets/error_retry_widget.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_cubit.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/controller/plans_state.dart';
 import 'package:itlegend_flutter_challenge/features/plans_selected/presentation/widgets/contact_with_support.dart';
@@ -20,8 +21,14 @@ class PlansView extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           }
           if (state.status == PlansStatus.error) {
-            return Center(child: Text('Error: ${state.error}'));
+            return ErrorRetryWidget(
+              message: state.error ?? 'حدث خطأ غير متوقع',
+              onRetry: () {
+                context.read<PlansCubit>().getPlans();
+              },
+            );
           }
+
           final plans = state.plans;
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
