@@ -1,4 +1,5 @@
 import 'package:itlegend_flutter_challenge/core/database/database_helper.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/datasource/offers_dao.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/data/models/promo_banner_model.dart';
 
 abstract class PromoBannersRepository {
@@ -6,12 +7,20 @@ abstract class PromoBannersRepository {
 }
 
 class PromoBannersRepositoryImpl implements PromoBannersRepository {
-  final DatabaseHelper _dbHelper;
+  late final OffersDao _offersDao;
 
-  PromoBannersRepositoryImpl(this._dbHelper);
+  PromoBannersRepositoryImpl() {
+    _initDao();
+  }
+
+  Future<void> _initDao() async {
+    final db = await DatabaseHelper().database;
+    _offersDao = OffersDao(db);
+  }
 
   @override
   Future<List<PromoBannerModel>> getAllPromoBanners() async {
-    return await _dbHelper.getAllPromoBanners();
+    await _initDao();
+    return await _offersDao.getAllPromoBanners();
   }
 }

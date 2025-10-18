@@ -1,4 +1,5 @@
 import 'package:itlegend_flutter_challenge/core/database/database_helper.dart';
+import 'package:itlegend_flutter_challenge/features/offers_age/data/datasource/offers_dao.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/data/models/sub_category_model.dart';
 
 abstract class SubCategoriesRepository {
@@ -6,12 +7,20 @@ abstract class SubCategoriesRepository {
 }
 
 class SubCategoriesRepositoryImpl implements SubCategoriesRepository {
-  final DatabaseHelper _dbHelper;
+  late final OffersDao _offersDao;
 
-  SubCategoriesRepositoryImpl(this._dbHelper);
+  SubCategoriesRepositoryImpl() {
+    _initDao();
+  }
+
+  Future<void> _initDao() async {
+    final db = await DatabaseHelper().database;
+    _offersDao = OffersDao(db);
+  }
 
   @override
   Future<List<SubCategoryModel>> getAllSubCategories() async {
-    return await _dbHelper.getAllSubCategories();
+    await _initDao();
+    return await _offersDao.getAllSubCategories();
   }
 }

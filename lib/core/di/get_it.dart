@@ -16,22 +16,18 @@ Future<void> initGetIt() async {
 
   // Offers
   sl.registerLazySingleton<CategoriesRepository>(
-    () => CategoriesRepositoryImpl(sl<DatabaseHelper>()),
+    () => CategoriesRepositoryImpl(),
   );
-  sl.registerLazySingleton<ProductsRepository>(
-    () => ProductsRepositoryImpl(sl<DatabaseHelper>()),
-  );
+  sl.registerLazySingleton<ProductsRepository>(() => ProductsRepositoryImpl());
   sl.registerLazySingleton<PromoBannersRepository>(
-    () => PromoBannersRepositoryImpl(sl<DatabaseHelper>()),
+    () => PromoBannersRepositoryImpl(),
   );
   sl.registerLazySingleton<SubCategoriesRepository>(
-    () => SubCategoriesRepositoryImpl(sl<DatabaseHelper>()),
+    () => SubCategoriesRepositoryImpl(),
   );
 
   // Plans
-  sl.registerLazySingleton<PlansRepository>(
-    () => PlansRepositoryImpl(sl<DatabaseHelper>()),
-  );
+  sl.registerLazySingleton<PlansRepository>(() => PlansRepositoryImpl());
 
   // Cubits
   sl.registerFactory<HomeCubit>(
