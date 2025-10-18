@@ -47,25 +47,9 @@
 <p align="center">
   <img src="apk/qrcode.png" width="180" alt="Download APK QR" />
   <br>
+  <b>📱 Scan Me</b>
+  <br><br>
   <a href="https://github.com/Korya25/itlegend_flutter_challenge_mahmoud_mohamed/releases/download/v1.0.0/it_legend_flutter_challenge.apk" target="_blank">
     📲 Click here to download APK
-  </a>
-</p>
-
----
-
-<h2 align="center">🎬 App Demo</h2>
-
-<p align="center">
-  <a href="videos/app_demo.mp4" target="_blank">
-    🎥 Watch App Demo (MP4)
-  </a>
-</p>
-
-<h2 align="center">🎬 Nav Bar</h2>
-
-<p align="center">
-  <a href="videos/nav_bar.mp4" target="_blank">
-    🎥 Watch App Demo (MP4)
   </a>
 </p>
