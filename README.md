@@ -1,17 +1,14 @@
 <div align="center">
-  <h1 style="color:#090F1F; font-weight:800;">
-    ItLegend Flutter Challenge
-  </h1>
+  <h1 align="center">
+  <img 
+    src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=4000&color=00FF00&center=true&vCenter=true&width=600&lines=ItLegend+Flutter+Challenge" 
+    alt="Typing Animation"
+  />
+</h1>
   <p>
     <i>A complete Flutter project with local database, state management, and clean architecture.</i>
   </p>
 </div>
-
-<h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=26&duration=4000&color=00FF00&center=true&vCenter=true&width=600&lines=Hi+👋,+I'm+Mahmoud+Mohamed;A+Passionate+Flutter+DeveloperFrom+Egypt" alt="Typing SVG" />
-</h1>
-
----
 
 ---
 
