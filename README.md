@@ -3,22 +3,19 @@
     ItLegend Flutter Challenge
   </h1>
   <p>
-    <i>A complete Flutter project with local database, state management, and smooth UI animations.</i>
+    <i>A complete Flutter project with local database, state management, and clean architecture.</i>
   </p>
 </div>
 
 ---
 
-## ✨ Features Implemented
+## 🎯 Project Goal
 
-- **Three Complete UI Screens:**  
-  Offers (products, categories), Plans (packages with details and badges), Filtering.
-- **SQLite Integration:**  
-  Local database with tables for products, categories, plans, banners, and subcategories.
-- **State Management:**  
-  Cubit
-- **Clean Architecture:**  
-  Organized folders for features, data, and core modules.
+The goal of this challenge is to **test the candidate’s skills** in:
+
+- Implementing accurate **Flutter UI** from design.
+- Managing **local data** using SQLite.
+- Writing **clean, organized code** and publishing it on GitHub professionally.
 
 ---
 
