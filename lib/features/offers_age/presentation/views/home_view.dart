@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:itlegend_flutter_challenge/core/presentation/widgets/error_retry_widget.dart';
 import 'package:itlegend_flutter_challenge/core/style/theme/app_colors.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/presentation/controller/home_cubit.dart';
 import 'package:itlegend_flutter_challenge/features/offers_age/presentation/controller/home_state.dart';
@@ -21,8 +22,14 @@ class HomeView extends StatelessWidget {
             return const Center(child: CircularProgressIndicator());
           }
           if (state is HomeError) {
-            return Center(child: Text('خطأ: ${state.message}'));
+            return ErrorRetryWidget(
+              message: state.message,
+              onRetry: () {
+                context.read<HomeCubit>().loadData();
+              },
+            );
           }
+
           if (state is! HomeLoaded) {
             return const SizedBox();
           }
