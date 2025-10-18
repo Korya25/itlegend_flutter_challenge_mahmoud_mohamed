@@ -24,7 +24,7 @@ The goal of this challenge is to **test the candidate’s skills** in:
 
 ## 📊 Project Management
 
-- Progress tracked via [Trello Board](https://trello.com/invite/b/68ee5df4445c52ecfaf57349/ATTI8564ac27cb68ad0980daff7c0b5bcd39FB147423/flutter-it-legend-task)
+- Progress tracked with [Trello Board](https://trello.com/invite/b/68ee5df4445c52ecfaf57349/ATTI8564ac27cb68ad0980daff7c0b5bcd39FB147423/flutter-it-legend-task)
 
 ---
 
